@@ -19,70 +19,63 @@
     </header>
 
     <main>
-        <!-- Blog Post 1: Trucks -->
+        <!-- Blog Post 1 -->
         <article>
             <h2>The Power and Passion of Pickup Trucks</h2>
-            <p><small>By Jayden Cooper | Published: <time datetime="2025-09-28">September 28, 2025</time></small></p>
+            <p><small>By Jayden Cooper | <time datetime="2025-09-28">September 28, 2025</time></small></p>
             <img src="4g.jpg" alt="Pickup truck with sunset behind it">
-            <p>
-                Pickup trucks have always held a special place in the hearts of automotive enthusiasts. They combine rugged utility with impressive power, making them perfect for work, adventure, and everyday driving. Whether hauling heavy loads, towing trailers, or exploring off-road trails, trucks are designed to handle it all. Enthusiasts appreciate their versatility, durability, and the feeling of control behind the wheel. Over the years, trucks have evolved from simple workhorses into high-tech machines equipped with advanced safety systems, turbocharged engines, and luxurious interiors that rival premium sedans. Customization plays a huge role in truck culture. Owners often personalize their rides with lift kits, oversized tires, LED light bars, and performance upgrades that reflect their unique style and needs. These modifications not only enhance capability but also express individuality. Pickup trucks also carry deep cultural significance symbolizing freedom, strength, and independence. They’re more than vehicles; they’re lifestyle statements. Whether it’s the iconic Ford pickups, the dependable Chevrolet Silverado, or the bold Ram 2500, each truck tells a story of engineering excellence and personal passion. From weekend camping trips to weekday commutes, trucks offer a blend of practicality and excitement. Owning a truck means embracing a legacy of resilience, innovation, and the pure joy of driving.
-            </p>
+            <p>Pickup trucks have always held a special place in the hearts of automotive enthusiasts. They combine rugged utility with impressive power, making them perfect for work, adventure, and everyday driving. Whether hauling heavy loads, towing trailers, or exploring off-road trails, trucks are designed to handle it all. Enthusiasts appreciate their versatility, durability, and the feeling of control behind the wheel. Over the years, trucks have evolved from simple workhorses into high-tech machines equipped with advanced safety systems, turbocharged engines, and luxurious interiors that rival premium sedans. Customization plays a huge role in truck culture. Owners often personalize their rides with lift kits, oversized tires, LED light bars, and performance upgrades that reflect their unique style and needs. These modifications not only enhance capability but also express individuality. Pickup trucks also carry deep cultural significance symbolizing freedom, strength, and independence. They’re more than vehicles; they’re lifestyle statements. Whether it’s the iconic Ford pickups, the dependable Chevrolet Silverado, or the bold Ram 2500, each truck tells a story of engineering excellence and personal passion. From weekend camping trips to weekday commutes, trucks offer a blend of practicality and excitement. Owning a truck means embracing a legacy of resilience, innovation, and the pure joy of driving.</p>
         </article>
 
-        <!-- Blog Post 2: Cars -->
+        <!-- Blog Post 2 -->
         <article>
             <h2>Top 5 Cars Every Enthusiast Should Know</h2>
-            <p><small>By Jayden Cooper | Published: <time datetime="2025-09-28">September 28, 2025</time></small></p>
-            <img src="1964.jpg" alt="Best car out of my top five">
-            <p>
-                Car enthusiasts often have a special connection to vehicles that define the history of automotive engineering. From legendary muscle cars to high-performance sports cars, certain models are iconic and must be appreciated by anyone who loves cars. These vehicles aren’t just machines they’re milestones in design, performance, and cultural identity. Learning about them helps enthusiasts understand how engineering has evolved, how aesthetics have shifted, and how cars have reflected the spirit of their time. Here are the top five cars every car lover should know. This list includes classics from the 1960s, modern supercars, and groundbreaking models that pushed the limits of technology and design. Think of the 1964 Ford Mustang, which ignited the pony car craze, or the Lamborghini Aventador, a modern marvel of speed and style. Each car represents more than horsepower it tells a story of innovation, ambition, and passion. By studying these vehicles, enthusiasts gain a deeper appreciation for craftsmanship, mechanical ingenuity, and the pure joy of driving. Whether it’s the roar of a V8 engine or the sleek lines of a carbon-fiber body, these cars embody the essence of automotive excellence. They’re not just admired they’re celebrated as timeless icons of the road.
-            </p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Car</th>
-                        <th>Year Released</th>
-                        <th>Type</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Ford Mustang</td>
-                        <td>1965</td>
-                        <td>Muscle Car</td>
-                    </tr>
-                    <tr>
-                        <td>Porsche 911</td>
-                        <td>1964</td>
-                        <td>Sports Car</td>
-                    </tr>
-                    <tr>
-                        <td>Chevrolet Corvette</td>
-                        <td>2014</td>
-                        <td>Sports Car</td>
-                    </tr>
-                    <tr>
-                        <td>Lamborghini Aventador</td>
-                        <td>2011</td>
-                        <td>Supercar</td>
-                    </tr>
-                </tbody>
-            </table>
+            <p><small>By Jayden Cooper | <time datetime="2025-09-28">September 28, 2025</time></small></p>
+            <img src="1964.jpg" alt="Classic Porsche 911">
+            <p>Car enthusiasts often have a special connection to vehicles that define the history of automotive engineering. From legendary muscle cars to high-performance sports cars, certain models are iconic and must be appreciated by anyone who loves cars. These vehicles aren’t just machines they’re milestones in design, performance, and cultural identity. Learning about them helps enthusiasts understand how engineering has evolved, how aesthetics have shifted, and how cars have reflected the spirit of their time. Here are the top five cars every car lover should know. This list includes classics from the 1960s, modern supercars, and groundbreaking models that pushed the limits of technology and design. Think of the 1964 Ford Mustang, which ignited the pony car craze, or the Lamborghini Aventador, a modern marvel of speed and style. Each car represents more than horsepower it tells a story of innovation, ambition, and passion. By studying these vehicles, enthusiasts gain a deeper appreciation for craftsmanship, mechanical ingenuity, and the pure joy of driving. Whether it’s the roar of a V8 engine or the sleek lines of a carbon-fiber body, these cars embody the essence of automotive excellence. They’re not just admired they’re celebrated as timeless icons of the road.</p>
         </article>
 
-        <!-- Newsletter Signup -->
+        <!-- Newsletter Form -->
         <section>
             <h3>Subscribe to My Car & Truck Newsletter</h3>
-            <form>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+            <form name="newsletter" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="newsletter" />
+                <label for="newsletter-email">Email:</label>
+                <input type="email" id="newsletter-email" name="email" required>
                 <button type="submit">Subscribe</button>
             </form>
         </section>
     </main>
 
+    <!-- Thank You Popup -->
+    <div id="thankyou-popup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+      background:rgba(0,0,0,0.6); text-align:center; padding-top:100px;">
+        <div style="background:#fff; padding:20px; border-radius:10px; display:inline-block;">
+            <h2>🎉 Thank You!</h2>
+            <p>You’ve successfully subscribed to the newsletter.</p>
+            <button onclick="document.getElementById('thankyou-popup').style.display='none'">Close</button>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2025 Jayden Cooper</p>
     </footer>
+
+    <script>
+    // Newsletter form popup
+    document.querySelector('form[name="newsletter"]').addEventListener("submit", function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+
+      fetch("/", {
+        method: "POST",
+        body: data
+      }).then(() => {
+        form.reset();
+        document.getElementById("thankyou-popup").style.display = "block";
+      }).catch((error) => alert(error));
+    });
+    </script>
 </body>
 </html>
