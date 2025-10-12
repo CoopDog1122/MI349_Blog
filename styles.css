@@ -1,35 +1,37 @@
-/* Basic Reset */
+/* ================== Basic Reset ================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body and font */
+/* ================== Body ================== */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #e0f7fa; /* light teal background */
+    color: #222; /* dark text for readability */
     padding: 20px;
 }
 
-/* Header */
-header {
-    background-color: #222;
-    color: #fff;
-    padding: 20px 0;
+/* ================== Header ================== */
+header, #main-header {
+    background-color: #006064; /* dark teal */
+    color: #ffffff;
     text-align: center;
-    margin-bottom: 20px;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header h1 {
-    font-family: 'Georgia', serif;
+    font-family: "Georgia", serif; /* headings in serif */
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
-/* Navigation */
+/* ================== Navigation ================== */
 nav ul {
     list-style: none;
     display: flex;
@@ -38,38 +40,51 @@ nav ul {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
     padding: 5px 10px;
     transition: background 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #fff;
-    color: #222;
+    background-color: #00acc1; /* lighter accent */
+    color: #ffffff;
     border-radius: 5px;
 }
 
-/* Main Content */
+/* Attribute selector for external links */
+a[target="_blank"] {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+/* ================== Containers ================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ================== Main Content ================== */
 main {
     max-width: 900px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* Articles */
+/* ================== Articles ================== */
 article {
     margin-bottom: 40px;
 }
 
 article h2 {
-    font-family: 'Georgia', serif;
+    font-family: "Georgia", serif; /* headings in serif */
     margin-bottom: 10px;
-    color: #222;
+    color: #004d40;
 }
 
 article img {
@@ -79,7 +94,12 @@ article img {
     border-radius: 10px;
 }
 
-/* Tables */
+article img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+/* ================== Tables ================== */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -93,22 +113,25 @@ table th, table td {
 }
 
 table th {
-    background-color: #f0f0f0;
+    background-color: #b2ebf2;
 }
 
-/* Forms */
+/* ================== Forms ================== */
 form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     margin-top: 20px;
 }
 
 form label {
     display: block;
     margin-bottom: 5px;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 form input, form select, form textarea {
-    width: 100%;
+    flex: 1 1 200px;
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 5px;
@@ -118,22 +141,115 @@ form input, form select, form textarea {
 
 form button {
     padding: 10px 20px;
-    background-color: #222;
+    background-color: #00796b;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 form button:hover {
-    background-color: #555;
+    background-color: #004d40;
 }
 
-/* Footer */
+/* ================== Footer ================== */
 footer {
     text-align: center;
     margin-top: 30px;
-    color: #555;
+    color: #004d40;
     font-size: 0.9rem;
+}
+
+/* ================== Flexbox Layouts ================== */
+
+/* Two-column layout */
+.flex-two {
+    display: flex;
+    gap: 20px;
+}
+
+.flex-two .sidebar {
+    flex: 1;
+    background-color: #b2ebf2;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.flex-two .content {
+    flex: 3;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+/* Three-column layout */
+.flex-three {
+    display: flex;
+    gap: 20px;
+}
+
+.flex-three .left, .flex-three .right {
+    flex: 1;
+    background-color: #b2ebf2;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.flex-three .middle {
+    flex: 2;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* ================== Images with Captions ================== */
+figure {
+    float: left;
+    margin: 0 15px 15px 0;
+    width: 300px;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    text-align: center;
+    color: #004d40;
+}
+
+/* ================== Lists ================== */
+ul, ol {
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+/* ================== Blockquotes ================== */
+blockquote {
+    font-style: italic;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #e0f2f1;
+    border-left: 5px solid #004d40;
+}
+
+/* ================== Popups ================== */
+#thankyou-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    text-align: center;
+    padding-top: 100px;
+}
+
+#thankyou-popup .popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
 }
