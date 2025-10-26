@@ -82,7 +82,7 @@ article {
 }
 
 article h2 {
-    font-family: "Georgia", serif; /* headings in serif */
+    font-family: "Georgia", serif;
     margin-bottom: 10px;
     color: #004d40;
 }
@@ -252,4 +252,149 @@ blockquote {
     padding: 20px;
     border-radius: 10px;
     display: inline-block;
+}
+
+/* ================== Responsive Design ================== */
+
+/* Medium screens and tablets */
+@media (max-width: 800px) {
+    .container {
+        padding: 12px;
+    }
+
+    body {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+        margin-bottom: 6px;
+    }
+
+    header, #main-header {
+        padding: 12px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        padding: 8px 0;
+    }
+
+    nav ul li a {
+        padding: 8px 12px;
+        display: inline-block;
+    }
+
+    main {
+        padding: 18px;
+        border-radius: 12px;
+    }
+
+    article img,
+    figure,
+    figure img {
+        width: 100%;
+        height: auto;
+        float: none;
+        margin: 0 0 15px 0;
+    }
+
+    figure {
+        width: 100%;
+    }
+
+    figcaption {
+        text-align: left;
+    }
+
+    form input, form select, form textarea, form button {
+        flex: 1 1 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+    }
+
+    table th, table td {
+        white-space: nowrap;
+    }
+
+    .flex-two, .flex-three {
+        flex-direction: column;
+    }
+
+    .flex-two .sidebar, .flex-two .content,
+    .flex-three .left, .flex-three .middle, .flex-three .right {
+        width: 100%;
+    }
+
+    blockquote {
+        margin: 12px 6px;
+        padding: 10px 14px;
+    }
+
+    footer {
+        font-size: 1rem;
+        padding: 12px 6px;
+    }
+
+    #thankyou-popup .popup-content {
+        width: calc(100% - 40px);
+        max-width: 420px;
+    }
+}
+
+/* Small phones and narrow screens */
+@media (max-width: 480px) {
+    body {
+        font-size: 1.02rem;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+
+    nav ul li a {
+        padding: 6px 10px;
+        font-size: 0.95rem;
+    }
+
+    article h2 {
+        font-size: 1.05rem;
+        margin-bottom: 8px;
+    }
+
+    .flex-two .content, .flex-three .middle, main {
+        padding: 14px;
+    }
+
+    form button {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    body, main, .flex-two .content, .flex-three .middle {
+        color: #111;
+        background-color: #ffffff;
+    }
+
+    header, #main-header {
+        position: relative;
+    }
+
+    article img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
 }
